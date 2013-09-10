@@ -1,0 +1,6 @@
+prototype(Visol.Plugin.FlickrGallery:Plugin) < prototype(TYPO3.Neos:Plugin)
+prototype(Visol.Plugin.FlickrGallery:Plugin) {
+     package = 'Visol.Plugin.FlickrGallery'
+     controller = 'Standard'
+     action = 'index'
+}

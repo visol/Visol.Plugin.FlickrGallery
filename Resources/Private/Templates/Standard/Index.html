@@ -1,0 +1,26 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="content">
+<f:if condition="{photosetId}">
+	<f:then>
+		<f:if condition="{albumData.photoset}">
+			<f:then>
+				<h2>{title}</h2>
+				<div id="flickrGallery">
+					<f:for each="{albumData.photoset.photo}" as="photo">
+					<a rel="fancybox" rel="group" href="http://farm{photo.farm}.static.flickr.com/{photo.server}/{photo.id}_{photo.secret}_{settings.lightboxSize}.jpg">
+						<img src="http://farm{photo.farm}.static.flickr.com/{photo.server}/{photo.id}_{photo.secret}_{settings.thumbnailSize}.jpg" />
+					</a>
+					</f:for>
+				</div>
+			</f:then>
+			<f:else>
+				Album is empty, not public or the album ID or app token is wrong.
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		Please enter an Album ID.
+	</f:else>
+</f:if>
+</f:section>

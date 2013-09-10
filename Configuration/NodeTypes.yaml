@@ -1,0 +1,30 @@
+'Visol.Plugin.FlickrGallery:Plugin':
+  superTypes: 
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Flickr Gallery'
+    group: 'Plugins'
+    icon: 'icon-picture'
+    inspector:
+      groups:
+        gallery:
+          label: 'Gallery'
+  properties:
+    title:
+      type: string
+      defaultValue: ''
+      ui:
+        label: Title
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: gallery
+    album:
+      type: string
+      defaultValue: ''
+      ui:
+        label: Album ID
+        reloadIfChanged: TRUE
+        inlineEditable: FALSE
+        inspector:
+          group: gallery

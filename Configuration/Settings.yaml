@@ -1,0 +1,6 @@
+Visol:
+  Plugin:
+    FlickrGallery:
+      thumbnailSize: 's'
+      lightboxSize: 'c'
+      apiKey: '0c07f9171f38e3c931994fdc67b7b7c1'
