@@ -24,7 +24,6 @@ class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 		
 		$currentNode = $this->request->getInternalArgument('__node');
 		$photosetId = $currentNode->getProperty('album');
-
 		$webserviceBase = 'http://api.flickr.com/services/rest/?format=json';
 		$webserviceUrl = $webserviceBase . '&method=flickr.photosets.getPhotos&api_key=' . $this->settings['apiKey'] . '&photoset_id=' . $photosetId . '&nojsoncallback=1';
 		$albumData = json_decode(file_get_contents($webserviceUrl));
