@@ -29,6 +29,7 @@ class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 		$albumData = json_decode(file_get_contents($webserviceUrl));
 
 		$this->view->assignMultiple(array(
+			'node' => $currentNode,
 			'albumData' => $albumData,
 			'photosetId' => $photosetId,
 			'title' => $currentNode->getProperty('title')

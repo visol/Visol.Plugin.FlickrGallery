@@ -1,2 +1,5 @@
-<f:flashMessages class="flashmessages" />
-<f:render section="content" />
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
+	<f:flashMessages class="flashmessages" />
+	<f:render section="content" />
+</neos:contentElement>
